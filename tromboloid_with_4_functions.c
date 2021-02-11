@@ -1,36 +1,34 @@
 //WAP to find the volume of a tromboloid using 4 functions.
-#include<math.h>
 #include<stdio.h>
-struct Point
+int height()
 {
-float x;
-float  y;
-};
-typedef struct Point point;
-point input()
-{
-point p;
-printf("enter co ordinates for point 1");
-scanf("%f %f",&p.x,&p.y);
-return p;
+int h;
+printf("Enter h value");
+scanf("%d",&h);
+return h;
 }
-float compute(point p1,point p2)
+int base()
 {
-    float s;
-s=sqrt(pow((p1.x-p1.y),2)+pow((p2.x-p2.y),2));
-return s;
+int b;
+printf("enter b value");
+scanf("%d",&b);
+return b;
 }
-void result(point p1,point p2,float s)
+int input()
 {
-    printf("distance between %f %f and %f %f is %f",p1.x,p1.y,p2.x,p2.y,s);
+int d;
+printf("enter d value");
+scanf("%d",&d);
+return d;
 }
 int main()
 {
-point p1,p2;
-float s;
-p1=input();
-p2=input();
-s=compute(p1,p2);
-result(p1,p2,s);
+int x,y,z;
+double r,vol=0;
+x=height();
+y=base();
+z=input();
+vol=0.33*((x*y*z)+(z/y));
+printf("Volume is %lf",vol);
 return 0;
 }
